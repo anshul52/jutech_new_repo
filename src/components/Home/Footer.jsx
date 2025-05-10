@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Footer() {
   return (
     <motion.footer
-      className="w-full py-12 relative overflow-hidden md:mt-10"
+      className="w-full py-12 relative overflow-hidden md:mt-10 select-none"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
