@@ -23,7 +23,10 @@ const Home = () => {
           <ServiceSection />
           <ProcessTimeline />
           <TestimonialsCarousel />
-          <CTASection setIsVisibleCTASection={setIsVisibleCTASection} isVisibleCTASection={isVisibleCTASection} />
+          <CTASection
+            setIsVisibleCTASection={setIsVisibleCTASection}
+            isVisibleCTASection={isVisibleCTASection}
+          />
           <CollaborateSection />
         </div>
       </div>

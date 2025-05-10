@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink } from "react-scroll";
 
 const links = [
   { title: "Our Services", link: "services" },
@@ -42,7 +42,9 @@ export const NavBar = ({ setIsVisibleCTASection }) => {
           >
             <motion.div whileHover="hover" className="relative">
               <ScrollLink
-                onClick={() => item.link === "contact" && setIsVisibleCTASection(true)}
+                onClick={() =>
+                  item.link === "contact" && setIsVisibleCTASection(true)
+                }
                 to={item.link}
                 duration={500}
                 offset={-20}

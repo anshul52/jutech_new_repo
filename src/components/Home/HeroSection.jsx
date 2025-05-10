@@ -9,7 +9,7 @@ const HeroSection = () => {
       <motion.img
         src={`/svgs/Hero.svg`}
         alt="Logo"
-        className="absolute hidden md:block right-0 md:-top-50 top-0 md:left-30 left-0 -z-20"
+        className="absolute hidden md:block right-0 md:-top-50  top-0 md:left-30 left-0 -z-20"
         initial={{ top: -200, left: 120, opacity: 0 }}
         animate={{
           top: [-200, -10, -200],
@@ -25,7 +25,7 @@ const HeroSection = () => {
         }}
       />
 
-      <motion.div className="w-full hidden md:block object-cover absolute md:top-40 bottom-0 right-0 -z-10">
+      <motion.div className="w-full hidden md:block object-cover absolute md:top-40 2xl:top-25 lg:top-90 xl:top-20 bottom-0 right-0 -z-10">
         <motion.svg
           viewBox="0 0 1411 646"
           fill="none"

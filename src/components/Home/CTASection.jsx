@@ -100,72 +100,6 @@ const CTASection = ({ isVisibleCTASection, setIsVisibleCTASection }) => {
             ↓
           </motion.span>
         </motion.button>
-
-        {/* Tech logos */}
-        <motion.div
-          className={`absolute -rotate-45 flex flex-col md:gap-5 gap-2 flex-wrap items-center justify-center overflow-hidden
-          md:bottom-0 md:right-[-400px] md:h-[596px]
-          ${hovering ? "-top-[1150px]" : "-top-[1200px]"} 
-          md:-top-[300px]`}
-          animate={{
-            x: hovering ? 40 : 0,
-            opacity: hovering ? 0.4 : 1,
-          }}
-          transition={{ duration: 0.5 }}
-        >
-          {/* Scrolling container */}
-          <motion.div
-            className="flex flex-col gap-5"
-            animate={{ y: ["0%", "10%"] }}
-            transition={{
-              repeat: Infinity,
-              duration: 10,
-              ease: "linear",
-            }}
-          >
-            {/* Duplicate logos exactly once for seamless scroll */}
-            {[...techLogos, ...techLogos].map((logo, idx) => (
-              <div key={idx} className="md:w-[90px] w-10 aspect-square">
-                <div className="rounded-full w-full rotate-90 aspect-square bg-[#F5F5F5] border-[4px] border-white flex items-center justify-center md:p-4 p-1">
-                  <img src={logo} className="w-full" alt="" />
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
-
-        {/* ---------------- */}
-        <motion.div
-          className={`absolute -rotate-45 flex flex-col md:gap-5 gap-2 flex-wrap items-center justify-center overflow-hidden
-          md:bottom-0 md:-right-[300px] md:h-[596px]
-          ${hovering ? "-top-[1080px]" : "-top-[1130px]"} 
-          md:-top-[230px]`}
-          animate={{
-            x: hovering ? 40 : 0,
-            opacity: hovering ? 0.4 : 1,
-          }}
-          transition={{ duration: 0.5 }}
-        >
-          {/* Scrolling container */}
-          <motion.div
-            className="flex flex-col gap-5"
-            animate={{ y: ["0%", "-10%"] }}
-            transition={{
-              repeat: Infinity,
-              duration: 10,
-              ease: "linear",
-            }}
-          >
-            {/* Duplicate logos exactly once for seamless scroll */}
-            {[...techLogoss, ...techLogoss].map((logo, idx) => (
-              <div key={idx} className="md:w-[90px] w-10 aspect-square">
-                <div className="rounded-full w-full rotate-90 aspect-square bg-[#F5F5F5] border-[4px] border-white flex items-center justify-center md:p-4 p-1">
-                  <img src={logo} className="w-full" alt="" />
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
       </div>
 
       <motion.div
@@ -472,8 +406,141 @@ const CTASection = ({ isVisibleCTASection, setIsVisibleCTASection }) => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Tech logos */}
+      <motion.div
+        className={`absolute -rotate-45 flex flex-col md:gap-5 gap-2 flex-wrap items-center justify-center overflow-hidden
+          md:bottom-0 sm:right-20 right-0 md:h-[596px]
+          sm:-top-[300px] -top-210`}
+        // ${hovering ? "-top-[1150px]" : "-top-[1200px]"}
+        animate={{
+          x: hovering ? 40 : 0,
+          opacity: hovering ? 0.4 : 1,
+        }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Scrolling container */}
+        <motion.div
+          className="flex flex-col gap-5"
+          animate={{ y: ["0%", "10%"] }}
+          transition={{
+            repeat: Infinity,
+            duration: 10,
+            ease: "linear",
+          }}
+        >
+          {/* Duplicate logos exactly once for seamless scroll */}
+          {[...techLogos, ...techLogos].map((logo, idx) => (
+            <div key={idx} className="md:w-[90px] w-10 aspect-square">
+              <div className="rounded-full w-full rotate-90 aspect-square bg-[#F5F5F5] border-[4px] border-white flex items-center justify-center md:p-4 p-1">
+                <img src={logo} className="w-full" alt="" />
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </motion.div>
+
+      {/* ---------------- */}
+      <motion.div
+        className={`absolute -rotate-45  flex flex-col md:gap-5 gap-2 flex-wrap items-center justify-center overflow-hidden sm:-top-40 sm:right-30 right-0 -top-190 md:h-[596px]
+          `}
+        // ${hovering && "-top-[1080px]"}
+        animate={{
+          x: hovering ? 40 : 0,
+          opacity: hovering ? 0.4 : 1,
+        }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Scrolling container */}
+        <motion.div
+          className="flex flex-col gap-5"
+          animate={{ y: ["0%", "-10%"] }}
+          transition={{
+            repeat: Infinity,
+            duration: 10,
+            ease: "linear",
+          }}
+        >
+          {/* Duplicate logos exactly once for seamless scroll */}
+          {[...techLogoss, ...techLogoss].map((logo, idx) => (
+            <div key={idx} className="md:w-[90px] w-10 aspect-square">
+              <div className="rounded-full w-full rotate-90 aspect-square bg-[#F5F5F5] border-[4px] border-white flex items-center justify-center md:p-4 p-1">
+                <img src={logo} className="w-full" alt="" />
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
 
 export default CTASection;
+
+{
+  /* Tech logos */
+}
+// <motion.div
+//   className={`absolute -rotate-45 flex flex-col md:gap-5 gap-2 flex-wrap items-center justify-center overflow-hidden
+//   md:bottom-0 md:right-[-400px] 2xl:-right-[900px] md:h-[596px]
+//   ${hovering ? "-top-[1150px]" : "-top-[1200px]"}
+//   md:-top-[300px]`}
+//   animate={{
+//     x: hovering ? 40 : 0,
+//     opacity: hovering ? 0.4 : 1,
+//   }}
+//   transition={{ duration: 0.5 }}
+// >
+//   {/* Scrolling container */}
+//   <motion.div
+//     className="flex flex-col gap-5"
+//     animate={{ y: ["0%", "10%"] }}
+//     transition={{
+//       repeat: Infinity,
+//       duration: 10,
+//       ease: "linear",
+//     }}
+//   >
+//     {/* Duplicate logos exactly once for seamless scroll */}
+//     {[...techLogos, ...techLogos].map((logo, idx) => (
+//       <div key={idx} className="md:w-[90px] w-10 aspect-square">
+//         <div className="rounded-full w-full rotate-90 aspect-square bg-[#F5F5F5] border-[4px] border-white flex items-center justify-center md:p-4 p-1">
+//           <img src={logo} className="w-full" alt="" />
+//         </div>
+//       </div>
+//     ))}
+//   </motion.div>
+// </motion.div>
+
+// {/* ---------------- */}
+// <motion.div
+//   className={`absolute -rotate-45 flex flex-col md:gap-5 gap-2 flex-wrap items-center justify-center overflow-hidden
+//   md:bottom-0 md:-right-[300px] 2xl:-right-[800px] md:h-[596px]
+//   ${hovering ? "-top-[1080px]" : "-top-[1130px]"}
+//   md:-top-[230px]`}
+//   animate={{
+//     x: hovering ? 40 : 0,
+//     opacity: hovering ? 0.4 : 1,
+//   }}
+//   transition={{ duration: 0.5 }}
+// >
+//   {/* Scrolling container */}
+//   <motion.div
+//     className="flex flex-col gap-5"
+//     animate={{ y: ["0%", "-10%"] }}
+//     transition={{
+//       repeat: Infinity,
+//       duration: 10,
+//       ease: "linear",
+//     }}
+//   >
+//     {/* Duplicate logos exactly once for seamless scroll */}
+//     {[...techLogoss, ...techLogoss].map((logo, idx) => (
+//       <div key={idx} className="md:w-[90px] w-10 aspect-square">
+//         <div className="rounded-full w-full rotate-90 aspect-square bg-[#F5F5F5] border-[4px] border-white flex items-center justify-center md:p-4 p-1">
+//           <img src={logo} className="w-full" alt="" />
+//         </div>
+//       </div>
+//     ))}
+//   </motion.div>
+// </motion.div>
